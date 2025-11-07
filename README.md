@@ -9,8 +9,8 @@
 - скачать репозиторий
 - запустить терминал в папке `/backend`
 - запустить виртуальное окружение python
-    -     python3 -m venv .venv
-    -     source .venv/bin/activate
+  `python3 -m venv .venv`
+  `source .venv/bin/activate`
 - установить зависимости `pip install -r requirements.txt`
 - запустить сервер `uvicorn src.app:app --reload`
 - интерфейс в сервису доступен по адресу `http://127.0.0.1:8000/doc`
