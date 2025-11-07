@@ -25,3 +25,5 @@ celerybeat.pid
 
 # Environment variables
 .env
+
+output.csv
