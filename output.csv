@@ -1,0 +1,11 @@
+id,country,temp,temp_type,weather,time,wind_speed,from_cache
+1,London,289.12,TempType.K,Clouds,2025-11-05 19:21:30.485270+03:00,3.13,False
+2,London,289.12,TempType.K,Clouds,2025-11-05 19:21:44.200588+03:00,3.13,False
+3,London,289.12,TempType.K,Clouds,2025-11-05 19:23:00.382169+03:00,3.13,False
+4,London,289.12,TempType.K,Clouds,2025-11-05 19:23:25.467852+03:00,3.13,False
+5,London,289.0,TempType.K,Clouds,2025-11-05 19:51:11.404011+03:00,3.58,False
+6,London,289.0,TempType.K,Clouds,2025-11-05 20:02:03.393835+03:00,3.13,False
+7,London,289.0,TempType.K,Clouds,2025-11-05 20:06:00.845507+03:00,3.13,True
+8,London,289.0,TempType.K,Clouds,2025-11-05 20:06:03.199863+03:00,3.13,True
+9,Minsk,279.77,TempType.K,Clouds,2025-11-05 20:06:36.487345+03:00,2.57,False
+10,Minsk,6.769999999999982,TempType.C,Clouds,2025-11-05 20:16:44.343672+03:00,2.57,False

@@ -15,6 +15,9 @@ class WeatherModel(Base):
     time: Mapped[datetime.datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
     wind_speed: Mapped[float]
     from_cache: Mapped[bool] = mapped_column(default=False)
+    
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 
 

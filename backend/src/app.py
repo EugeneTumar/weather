@@ -2,6 +2,7 @@ from datetime import datetime
 from fastapi import FastAPI, HTTPException, Query, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 
+from fastapi.responses import FileResponse
 from slowapi import Limiter
 from slowapi.util import get_remote_address
 
@@ -12,6 +13,7 @@ from .service import get_weather
 from .exceptions import CountryNotFound
 from .weatherHistory.service import get_weather_history
 from .utils.pingWeatherApi import ping_api
+from .csvWhiter import csv_write
 
 
 app = FastAPI(docs_url='/doc')
@@ -54,6 +56,12 @@ def get_history_endpoint(search_data: SearchRequestSchema):
         return Response(status_code=400, headers={'message': 'country not found'})
     except Exception as e:
         return Response(status_code=400, headers={'message': e})
+    
+
+@app.post("/file/download")
+def get_history_csv_endpoint(search_data: SearchRequestSchema): 
+    csv_write([item.to_dict() for item in get_history_endpoint(search_data)])
+    return FileResponse(path='output.csv', filename='output.csv', media_type='multipart/form-data')
 
 @app.get('/health')
 def health_endpoint():
